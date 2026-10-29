@@ -1,0 +1,121 @@
+:root{
+	--marginWidth: 0;
+}
+
+html, body{
+	position:relative;
+	width: calc(var(--ww) * 1px);
+	height: calc(var(--wh) * 1px);
+	margin: 0;
+	padding: 0;
+	font-size: calc(var(--ww) / 30 * 1px);
+}
+.layer{ position:absolute; 
+	margin-left: 10%;}
+
+.title{}
+canvas, .center > * , .whiteOut{
+	pointer-events: none;
+	position : absolute;
+	top: 0;
+	left: 0;
+	width: calc(var(--ww) * 1px);
+	height: calc(var(--wh) * 1px);
+}
+
+.freeTextArea{
+	position: absolute;
+	left: calc(var(--ww) / var(--x) * 1px);
+	top: calc(var(--wh) / var(--y) * 1px);
+	width: calc(var(--ww) /var(--width) * 1px);
+	height: calc(var(--wh) /var(--height) * 1px);
+}
+
+.opText{
+}
+
+.whiteOut{
+	position: absolute;
+	background-color: white;
+}
+
+#haikei{
+	position:relative;
+}
+
+.texture{
+	mix-blend-mode=multiply;
+}
+
+.buttonBase{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.buttonBase > *{
+	font-size: calc(var(--ww) / 23 * 1px);
+	border: calc(var(--ww) / 170 * 1px) solid #F0F5E0;
+	border-radius: calc(var(--ww) / 35 * 1px);
+	color: white;
+	background-image: linear-gradient(180deg, #99D030, #95CA28);
+	font-weight: 501;
+	letter-spacing: 0.05em;
+ 
+	position:absolute;
+	left: calc(var(--ww) / 10 * 6px);
+	top: calc(var(--ww) / 11 * 3px);
+	width: calc(var(--ww) / 8 * 3px);
+	height: calc(var(--wh) / 5 * 1px);
+	pointer-events: auto;
+	
+}
+
+#startButton{
+	
+}
+
+#optionButton, #gameButton{
+	position:absolute;
+	top: calc(var(--ww) / 12 * 5px);
+}
+
+#gameButton{
+	background-image: linear-gradient(180deg, var(--buttonColor1), var(--buttonColor2));
+	border: calc(var(--ww) / 170 * 1px) solid var(--buttonBorder);
+}
+
+.menuBase, .menuBase > *{
+	position:absolute;
+	left: calc(var(--ww) * 0.6px);
+	top: calc(var(--wh) * 0.04px );
+	width: calc(var(--ww) * 0.38px);
+	height: calc(var(--wh) * 0.15px);
+}
+
+.menuElement{
+	--num: 1;
+	left: calc(var(--ww) * 0.01px * var(--num));
+	top: calc(var(--wh) * 0.015px);
+	width: calc(var(--ww) * 0.07px);
+	height: calc(var(--ww) * 0.07px);
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: none;
+}
+
+
+
+.onlyNotDoing, .onlyNotDoing > *{
+	visibility: hidden;
+}
+
+#nowMoney, #debt{
+	width: calc(var(--ww) / 5 * 1px);
+	display: flex;
+	justify-content: flex-end;
+}
